@@ -5,8 +5,29 @@ sources:
     schema: gz_raw_data #Nome dataset su Bigquery
     tables:
       - name: product #Alias
-        identifier: raw_gz_product #Nome tabella BQ
+        identifier: raw_gz_product #Nome tabella BQ   
+        columns:
+          - name: products_id
+            description: it's a primary key, tested
+            tests:
+              - not_null
+              - unique
+                           
       - name: sales
         identifier: raw_gz_sales
+        description: sales of Greenweez / we have on row per product_id found in each orders_id #Descrizione
+        columns:
+          - name: pdt_id #Col suo nome originale perchè sono su source.
+            description: Possible primary key, faccio test
+            tests:
+              - not_null
+              - unique
       - name: ship
-        identifier: raw_gz_ship #
+        identifier: raw_gz_ship
+        columns:
+          - name: orders_id
+            description: it's a primary key, tested
+            tests:
+              - unique
+              - not_null
+              

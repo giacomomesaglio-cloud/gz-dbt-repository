@@ -3,4 +3,5 @@ version: 2 #Version dbt
 sources:
   - name: gz_raw_data #Nome dataset su Bigquery
     tables:
-      - name: raw_gz_product #Qua salvo prima di cliccare su Generate model
+      - name: raw_gz_product #Nome prima tabella. Qua salvo prima di cliccare su Generate model
+      - name: raw_gz_sales #Nome seconda tabella.

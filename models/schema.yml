@@ -18,10 +18,7 @@ sources:
         description: sales of Greenweez / we have on row per product_id found in each orders_id #Descrizione
         columns:
           - name: pdt_id #Col suo nome originale perchè sono su source.
-            description: Possible primary key, faccio test
-            tests:
-              - not_null
-              - unique
+            description: not Possible primary key, faccio test
       - name: ship
         identifier: raw_gz_ship
         columns:

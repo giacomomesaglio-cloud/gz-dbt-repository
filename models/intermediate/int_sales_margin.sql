@@ -1,5 +1,3 @@
---margin = revenue - purchase_cost
---purchase_cost = quantity * purchase_price
 SELECT 
 products_id,
 orders_id,
@@ -12,3 +10,4 @@ ROUND(revenue-(quantity*purchase_price),2) AS margin
 FROM {{ ref('stg_raw__sales') }} AS s
 LEFT JOIN {{ ref('stg_raw__product') }} AS p
 USING (products_id)
+ORDER BY orders_id DESC

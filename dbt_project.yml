@@ -40,3 +40,5 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+  intermediate:
+      +materialized: table #Dico di stampare tavola e non view come risultato nel intemediate table

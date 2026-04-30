@@ -1,0 +1,2 @@
+--margin = revenue - purchase_cost
+--purchase_cost = quantity * purchase_price
